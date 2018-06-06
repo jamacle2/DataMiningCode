@@ -52,8 +52,8 @@ import cc.kave.rsse.calls.utils.RsseCallsJsonUtils;
 
 public class BMNMining {
 
-	private static final String dirRoot = "/path/to/folder/";
-	private static final String dirEvents = dirRoot + "someevents/";
+	private static final String dirRoot = "C://Users//J_2//git//java-cc-kave-examples/";
+	private static final String dirEvents = dirRoot + "Events-170301-2/";
 	private static final String dirContexts = dirRoot + "Contexts-170503/";
 	private static final String dirSortedUsages = dirRoot + "sortedusages/";
 	private static final String dirModels = dirRoot + "bmn-models/";

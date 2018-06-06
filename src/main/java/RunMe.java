@@ -15,7 +15,11 @@
  * the License.
  */
 
-import examples.CountEventTypeExample;
+import java.util.Map;
+
+import examples.FailureRateByDayAndWorktime;
+import examples.GettingStarted;
+import examples.GettingStartedContexts;
 import examples.rsse.calls.BMNMining;
 
 public class RunMe {
@@ -26,7 +30,7 @@ public class RunMe {
 	 * includes a bunch of folders that have dates as names and that contain .zip
 	 * files.
 	 */
-	public static String eventsDir = "/Volumes/Data/Events-170301-2";
+	public static String eventsDir = "Events-170301-2";
 
 	/*
 	 * download the context data and follow the same instructions as before.
@@ -37,11 +41,13 @@ public class RunMe {
 
 		// BASIC DATA READING
 		
-		// new GettingStarted(eventsDir).run();
-		new CountEventTypeExample(eventsDir).run();
-		// new GettingStartedContexts(contextsDir).run();
+		//new GettingStarted(eventsDir).run();
+		FailureRateByDayAndWorktime eventList = new FailureRateByDayAndWorktime(eventsDir);
+		eventList.run();
+		Map<String, Integer> eventCount = eventList.getCounts();
+		//new GettingStartedContexts(contextsDir).run();
 		
 		// RSSE RELATED EXAMPLES
-		new BMNMining().run();
+		//new BMNMining().run();
 	}
 };
